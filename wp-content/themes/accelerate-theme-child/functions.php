@@ -38,7 +38,8 @@ function create_custom_post_types(){
 			'has_archive' => true,
 			'rewrite' => array( 'slug' => 'case_studies' )
 		)
-	);
+	);//closes register_post_type from line 31
+
 }
 //Hook this custom post type function into the theme
 add_action( 'init', 'create_custom_post_types');

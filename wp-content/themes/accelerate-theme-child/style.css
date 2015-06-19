@@ -187,4 +187,171 @@ figure.featured-work-image img{
 	margin-top: 40px;
 }
 
+/*About*/
+.aboutpage-hero {
+	background: url("img/taxi-photo.jpg") no-repeat scroll center / cover rgba(0, 0, 0, 0);
+	height: 310px;
+    max-width: 100%;
+}
 
+#hero-statement p {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 400;
+	color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 55px;
+	height: 200px;
+	width: 550px;
+}
+
+#hero-statement .company-name {
+	color: #45ac9d;
+}
+
+article.about-accelerate{
+	font-family: 'Open Sans';
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+article.about-accelerate h4{
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 25pt;
+}
+
+#services{
+	padding-top: 55px;
+	text-align: center;
+	width: 525px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#services h4{
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 16.5pt;
+	color: #3b3b3b;
+}
+
+p#services{
+	font-family: 'Open Sans';
+	font-size: 16.5pt;
+	color: #3b3b3b;
+}
+
+#content-strategy,
+#influencer-mapping,
+#social-media,
+#design_and_development{
+	height: 300px;
+}
+
+.content-text{
+	float: right;
+	width: 610px;
+	margin-top: 16px;
+}
+
+.content-image{
+	float: left;
+	width: 310px;
+	height: 215px;
+}
+
+#content-strategy .content-image img {
+	/*margin-right: 40px;*/
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.influencer-text{
+	float: left;
+	width: 575px;
+	margin-top: 16px;
+}
+
+.influencer-image{
+	float: right;
+	width: 275px;	
+}
+
+#influencer-mapping .influencer-image img {
+	margin-left: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.social-text{
+	float: right;
+	width: 575px;
+	margin-top: 16px;
+}
+
+.social-image{
+	float: left;
+	width: 275px;
+	height: 215px;
+}
+
+#social-media .social-image img {
+	margin-right: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.design-text{
+	float: left;
+	width: 575px;
+	margin-top: 16px;
+}
+
+.design-image{
+	float: right;
+	width: 275px;	
+}
+
+#design_and_development .design-image img {
+	margin-left: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#about-footer{
+	text-align: center;
+	border-top-color: #e3e1e1;
+	border-top-style: dotted;;
+	border-top-width: 1px;
+	margin-top: 40px;
+	padding-top: 20px;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#about-footer .contact-message{
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	display: inline-block;
+}
+
+#about-footer .contact-message strong{
+	font-size: 20px;
+	padding-right: 40px;
+	text-align: left;
+}
+
+#about-footer .contact-message .button{
+	float: right;
+	font-weight: 400;
+	padding-left: 60px;
+	padding-right: 60px;
+	margin-top: -25px;
+
+}
