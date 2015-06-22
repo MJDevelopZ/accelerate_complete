@@ -353,5 +353,53 @@ p#services{
 	padding-left: 60px;
 	padding-right: 60px;
 	margin-top: -25px;
+}
 
+/*404*/
+.nf-error{
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 130px;	
+
+}
+
+.map-image{
+    float: left;
+    width: 190px;
+    margin-right: 50px;
+}
+
+.nf_details{
+	max-width: 500px;
+	float: left;
+	margin-top: -10px;	
+}
+
+.nf-page-title{
+	font-family: 'Montserrat';
+	font-size: 25pt;
+	color: #45AC9D;
+	/*line-height: 45pt;*/
+}
+
+.nf-page-content{
+	font-family: 'Open Sans';
+	font-size: 15pt;
+	/*line-height: 27.5pt;*/	
+	color: #3b3b3b;
+} 
+
+#nf-link-p{
+	margin-bottom: 200px;
+}
+
+#blog-link,
+#work-link{
+	color: #45AC9D;
+	font-weight: bold;
+}
+
+a, a:link, a:hover{
+	color: #45AC9D;
 }
