@@ -10,49 +10,29 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Skillcrush_Starter
+ * @since Skillcrush Starter 1.0
  */
 
 get_header(); ?>
-	<!-- BLOG PAGE -->
-	<section class="blog-page">
-		<div class="site-content">
-			<div class="main-content">
-				
-				<?php
-			if ( have_posts() ) :
-				// Start the Loop.
-				while ( have_posts() ) : the_post(); ?>
-				
-					<article class="post-entry">
-					<div class="entry-wrap">
-						<header class="entry-header">
-							<div class="entry-meta">
-								<time class="entry-time" datetime="2014-09-29T04:33:51+00:00" itemprop="datePublished" title="Monday, September 29, 2014, 4:33 am"><?php the_date();?></time>
-							</div>
-							<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						</header>
-						<div class="entry-summary">
-							<?php the_excerpt(); ?>
-						</div>
-						<footer class="entry-footer">
-							<div class="entry-meta">
-								<span class="entry-terms author">Written by <a href=""><?php the_author(); ?></a></span>
-								<span class="entry-terms category">Posted in <a href="">Books</a></span>
-								<span class="entry-terms commets"><a href="">2 Comments</a></span>
-							</div>
-						</footer>
-					</div>
-				</article>
-			<?php endwhile; endif; ?>
 
-			</div>
-			
-			<?php get_sidebar(); ?>
-		</div>
-				<div class="clearfix"></div>
+<section class="index-page">		
+	<div class="main-content">
+		<?php if ( have_posts() ): ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part('content-blog', get_post_format()); ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
+	</div>
+	
+	<?php get_sidebar(); ?>
 
-	</section>
-	<!-- END blog page -->
-<?php get_footer();
+	<?php if ( have_posts() ): ?>
+		<div id="navigation" class="container">
+	        <div class="left"><?php next_posts_link('&larr; <span>Older Posts</span>'); ?></div>
+	        <div class="right"><?php previous_posts_link('<span>Newer Posts</span> &rarr;'); ?></div>
+	    </div>
+	<?php endif; ?>
+</section>
+
+<?php get_footer(); ?>

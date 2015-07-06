@@ -44,15 +44,31 @@ function create_custom_post_types(){
 //Hook this custom post type function into the theme
 add_action( 'init', 'create_custom_post_types');
 
-//Create dynamic sidebar
-register_sidebar( array(
-	'name' =>__( 'Homepage sidebar', 'homepage-sidebar'),
-	'id' => 'sidebar-2',
-	'description' => __( 'Appears on the static front page template', 'homepage-sidebar'),
-	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-	'after_widget' => '</aside>',
-	'before_title' => '<h3 class="widget-title">',
-	'after_title' => '</h3>',
-) );
 
+//Create function to register sidebar(s)
+function my_register_sidebars(){
+	//Create dynamic sidebar on front page for twitter feed
+		register_sidebar( array(
+			'name' =>__( 'Homepage sidebar', 'homepage-sidebar'),
+			'id' => 'sidebar-2',
+			'description' => __( 'Appears on the static front page template', 'homepage-sidebar'),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		) );
 
+	//Create dynamic primary sidebar for the remainder of the site
+		register_sidebar( array(
+			'name' =>__('sidebar-1'),
+			'id' => 'sidebar-1',
+			'description' => __('Primary sidebar for the tempates requiring a sidebar', 'primary'),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		) );
+}
+
+//Hook this sidebar function into the theme
+add_action( 'widgets_init', 'my_register_sidebars');
